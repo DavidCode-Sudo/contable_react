@@ -1,0 +1,44 @@
+/* Sistema de Fuentes - Fallback a fuentes del sistema */
+/* 
+ * Este archivo define las fuentes del sistema sin depender de archivos externos
+ * para evitar errores 404 y mejorar la velocidad de carga
+ */
+
+/* Definición de fuentes con fallbacks del sistema */
+:root {
+  /* Fuente principal para texto (Inter fallback) */
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  
+  /* Fuente para títulos (Poppins fallback) */
+  --font-family-heading: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  
+  /* Fuente monoespaciada para código */
+  --font-family-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+/* Aplicar fuentes del sistema globalmente */
+body {
+  font-family: var(--font-family-sans-serif);
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: var(--font-family-heading);
+}
+
+code, kbd, pre, samp {
+  font-family: var(--font-family-mono);
+}
+
+/* Clases de utilidad para fuentes */
+.font-sans {
+  font-family: var(--font-family-sans-serif);
+}
+
+.font-heading {
+  font-family: var(--font-family-heading);
+}
+
+.font-mono {
+  font-family: var(--font-family-mono);
+}
